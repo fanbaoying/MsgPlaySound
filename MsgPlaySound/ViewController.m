@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MsgPlaySound.h"
 @interface ViewController ()
 
 @end
@@ -16,9 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    MsgPlaySound *sound = [[MsgPlaySound alloc]initSystemShake];
+//    [sound play];
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+   MsgPlaySound *soundone = [[MsgPlaySound alloc]initSystemSoundWithName:@"" SoundType:@""];
+    [soundone play];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
